@@ -1,0 +1,22 @@
+After download this file, extract and put to your htdocs directory in Windows
+or var/www/html/ if you are using Apache in Linux.
+
+Create DB MySQL with name restfulapi according to db setting in .env file
+then open CMD or CLI service and put the directory
+where you put this project. 
+Then run this command: 
+- composer update
+- php artisan migrate
+- php artisan db:seed
+- php artisan serve
+
+open project on your url:
+localhost:8000/kontak
+
+if you want to try RESTful API, then you can
+try in Postman Application with this address:
+localhost:8000/mainkontak [GET] --> Show all data
+localhost:8000/mainkontak/{id} [GET] --> Show detail data
+localhost:8000/mainkontak/store [POST] --> create data (insert data in body with this key: nama, email, nohp, alamat)
+localhost:8000/mainkontak/update/{id} [POST] --> update data (update data in body with this key: nama, email, nohp, alamat)
+localhost:8000/mainkontak/delete/{id} [POST] --> delete data 
